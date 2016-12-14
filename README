@@ -1,0 +1,6 @@
+ZZSaaS
+
+1. cd ~
+2. virtualcreate.sh NOM
+3. cd NOM
+4. boostrap.sh
