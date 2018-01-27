@@ -18,3 +18,6 @@ invoke modules.clone
 # invoke modules.clone -c base.cfg -m
 # invoke modules.clone -c core.cfg -m
 
+# sao
+invoke sao.install
+invoke sao.grunt
