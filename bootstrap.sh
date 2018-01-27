@@ -13,3 +13,8 @@ pip install -r config/requirements.txt
 
 invoke modules.clone -c base.cfg
 invoke modules.clone
+
+# master
+# invoke modules.clone -c base.cfg -m
+# invoke modules.clone -c core.cfg -m
+
