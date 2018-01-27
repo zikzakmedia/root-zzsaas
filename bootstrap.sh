@@ -1,6 +1,6 @@
 #!/bin/bash
 #ln -s ~/.virtualenvs/${PWD##*/}/bin .
-pip install psycopg2cffi
+#pip install psycopg2cffi
 pip install --upgrade pip
 pip install simpleeval
 
