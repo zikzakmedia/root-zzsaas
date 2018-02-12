@@ -27,13 +27,11 @@ class Application(object):
     def __call__(self, environ, start_response):
         if not self.loaded:
             config.update_etc(environ.get('trytond.config'))
+            logconf = config.get('optional', 'logconf')
+            if logconf:
+                os.environ['TRYTOND_LOGGING_CONFIG'] = logconf
+
             from trytond.application import app
-            #import logging
-            #from logging.handlers import TimedRotatingFileHandler
-            #file_handler = TimedRotatingFileHandler('/home/administrator/phoenix/server.log', 'd', 1, 7, 'utf-8')
-            #file_handler.setLevel(logging.NOTSET)
-            #file_handler.setFormatter(logging.Formatter('%(process)d - [%(asctime)s] %(levelname)s:%(name)s:%(message)s'))
-            #app.logger.addHandler(file_handler)
             self.app = app
             self.loaded = True
         return self.app.wsgi_app(environ, start_response)
