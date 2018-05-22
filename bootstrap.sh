@@ -5,7 +5,7 @@ pip install --upgrade pip
 pip install simpleeval
 
 hg clone ssh://hg@bitbucket.org/zikzakmedia/trytontasks tasks
-hg clone ssh://hg@bitbucket.org/zikzakmedia/tryton-config config -b default
+hg clone ssh://hg@bitbucket.org/zikzakmedia/tryton-config config -b 4.8
 touch local.cfg
 
 pip install -r tasks/requirements.txt
