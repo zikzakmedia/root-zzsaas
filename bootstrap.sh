@@ -13,6 +13,7 @@ pip install -r config/requirements.txt
 
 invoke modules.clone -c base.cfg
 invoke modules.clone
+quilt push -a
 
 # master
 # invoke modules.clone -c base.cfg -m
