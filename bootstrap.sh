@@ -10,6 +10,7 @@ touch local.cfg
 
 pip install -r tasks/requirements.txt
 pip install -r config/requirements.txt
+pip install -r requirements.txt
 
 invoke modules.clone -c base.cfg
 invoke modules.clone
