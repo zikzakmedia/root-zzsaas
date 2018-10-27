@@ -20,9 +20,9 @@ invoke modules.clone -c base.cfg
 
 if [ ! -z "$2" ]; then
     hg clone ssh://zikzak@hg.zzsaas.com//home/tryton/master/clients/$2/ modules/$2 -b $1
-    rm local.cfg
-    ln -s modules/$1/local.cfg .
-    ln -s modules/$1/requirements.txt .
+    rm local.cfg requirements.txt
+    ln -s modules/$2/local.cfg .
+    ln -s modules/$2/requirements.txt .
     pip install -r requirements.txt
 fi
 invoke modules.clone
