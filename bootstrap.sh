@@ -9,8 +9,8 @@ fi
 pip install --upgrade pip
 pip install simpleeval
 
-hg clone ssh://hg@bitbucket.org/zikzakmedia-erp/trytontasks tasks
-hg clone ssh://hg@bitbucket.org/zikzakmedia-erp/tryton-config config -b $1
+git clone git@github.com:zikzakmedia/trytontasks.git tasks
+git clone git@github.com:zikzakmedia/tryton-config.git config -b $1
 touch local.cfg
 
 pip install -r tasks/requirements.txt
@@ -19,7 +19,7 @@ pip install -r config/requirements.txt
 invoke modules.clone -c base.cfg
 
 if [ ! -z "$2" ]; then
-    hg clone ssh://zikzak@hg.zikzakmedia.com//home/tryton/master/clients/$2/ modules/$2 -b $1
+    git clone ssh://zikzak@hg.zikzakmedia.com:2299//home/tryton/master/clients/$2/ modules/$2 -b $1
     rm local.cfg requirements.txt
     ln -s modules/$2/local.cfg .
     ln -s modules/$2/requirements.txt .
